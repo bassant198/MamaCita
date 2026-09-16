@@ -1,0 +1,8 @@
+{
+  "name": "MamaCita Studio",
+  "description": "MamaCita is Shebin El-Kom's premier women-only dance, fitness, and wellness studio combining dance styles, high-energy workouts, and empowering community.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-burgundy-950: #120307;
+    --color-burgundy-900: #1C060B;
+    --color-burgundy-800: #2C0710;
+    --color-burgundy-700: #420A17;
+    --color-burgundy-600: #5C0E20;
+    --color-burgundy-500: #78132B;
+    --color-gold-400: #F3D784;
+    --color-gold-500: #E5C158;
+    --color-gold-600: #D4AF37;
+    --color-gold-700: #B38E22;
+    --color-cream-100: #FAF5EE;
+    --color-cream-200: #F5EBE1;
+    --color-cream-300: #EADBC8;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #120307;
+    color: #FAF5EE;
+    overflow-x: hidden;
+  }
+
+  html[lang="ar"] body,
+  html[dir="rtl"] body {
+    font-family: 'Cairo', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] .font-serif-title,
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] .font-serif-title {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 800;
+  }
+
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+
+  html[lang="ar"] .font-display,
+  html[dir="rtl"] .font-display {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1C060B;
+}
+::-webkit-scrollbar-thumb {
+  background: #5C0E20;
+  border-radius: 4px;
+  border: 2px solid #1C060B;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Glass & Glow utilities */
+.glass-burgundy {
+  background: rgba(44, 7, 16, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 193, 88, 0.15);
+}
+
+.glass-cream {
+  background: rgba(250, 245, 238, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(120, 19, 43, 0.12);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF1D0 0%, #E5C158 50%, #B38E22 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.burgundy-gradient-text {
+  background: linear-gradient(135deg, #5C0E20 0%, #78132B 50%, #3B0810 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(229, 193, 88, 0.15) 50%, transparent 100%);
+  background-size: 200% 100%;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 5s ease-in-out infinite;
+}
+
